@@ -9,45 +9,111 @@
       rel="stylesheet"
     />
     <style>
+      *{
+        background-color: crimson;
+      }
+      
+      div>*{
+        background-color: #f2f2f2;
+      }
+
       body {
         font-family: "Sono", sans-serif;
       }
 
-      /* Hint: What can you do with a media query and flexbox? */
-      @media (max-width: 1250px) {
+      .Title{
+        text-align: center;
+        font-weight: bolder;
       }
+
+      .pricing-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 2rem;
+    }
+
+    .pricing-plan {
+      flex: 1;
+      max-width: 400px;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .plan-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .plan-price {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .plan-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .plan-features li {
+      margin-bottom: 20px;
+    }
+
+    .plan-button {
+      padding: 10px;
+      background-color: #ff6600;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+    }
+
+    @media (max-width: 1250px) {
+      .pricing-container {
+        flex-direction: column;
+        height: 100%;
+      }
+    }
     </style>
   </head>
 
   <body>
+    <div class="Title">
+      <h1>Netflix Subscription Plans</h1>
+    </div>
     <div class="pricing-container">
       <div class="pricing-plan">
         <div class="plan-title">Basic</div>
-        <div class="plan-price">$9.99/month</div>
+        <div class="plan-price">Rs. 199/month</div>
         <ul class="plan-features">
-          <li>✅ 10GB Storage</li>
-          <li>✅ 1 User</li>
-          <li>🚫 Support</li>
+          <li>✅ All movies, shows, documentaries</li>
+          <li>✅ 1 device</li>
+          <li>🚫 Ad Free</li>
         </ul>
         <button class="plan-button">Sign Up</button>
       </div>
       <div class="pricing-plan">
         <div class="plan-title">Standard</div>
-        <div class="plan-price">$19.99/month</div>
+        <div class="plan-price">Rs. 399/month</div>
         <ul class="plan-features">
-          <li>✅ 50GB Storage</li>
-          <li>✅ 5 Users</li>
-          <li>✅ Phone &amp; Email Support</li>
+          <li>✅ All movies, shows, documentaries</li>
+          <li>✅ 5 devices</li>
+          <li>✅ Ad Free</li>
         </ul>
         <button class="plan-button">Sign Up</button>
       </div>
       <div class="pricing-plan">
         <div class="plan-title">Premium</div>
-        <div class="plan-price">$49.99/month</div>
+        <div class="plan-price">Rs. 799/month</div>
         <ul class="plan-features">
-          <li>✅ 100GB Storage</li>
-          <li>✅ 10 Users</li>
-          <li>✅ 24/7 Support</li>
+          <li>✅ All movies, shows, documentaries</li>
+          <li>✅ 10 devices</li>
+          <li>✅ Ad Free</li>
         </ul>
         <button class="plan-button">Sign Up</button>
       </div>
